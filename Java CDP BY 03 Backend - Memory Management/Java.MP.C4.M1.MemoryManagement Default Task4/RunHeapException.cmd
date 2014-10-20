@@ -1,0 +1,3 @@
+javac HeapException.java
+java HeapException
+pause
