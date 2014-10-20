@@ -14,6 +14,8 @@ public class SecondTask {
 		printA(a);
 		a = returnObject();
 		printA(a);
+		passingByValue(a[0]);
+		printA(a);
 	}
 
 	    private static void passByReference(int[] a)
@@ -29,6 +31,11 @@ public class SecondTask {
 	    private static int[] returnObject()
 	    {
 	    	return new int[]{3};
+	    }
+
+		private static void passingByValue(int a)
+	    {
+	    	a = 4;
 	    }
 	    
 	    private static void printA(int[] a)
