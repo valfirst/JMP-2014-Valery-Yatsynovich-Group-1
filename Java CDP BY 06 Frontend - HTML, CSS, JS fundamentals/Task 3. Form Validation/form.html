@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Форма регистрации</legend>
+				<div>
+					<table>
+						<tr>
+							<td>ФИО</td>
+							<td><input type="text" oninvalid="this.setCustomValidity('The field name can not be less than 3 characters.')" pattern="\D{3,}" onkeypress="this.setCustomValidity('')" required autofocus></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><input type="email" required autocomplete="off" multiple></td>
+						</tr>
+						<tr>
+							<td>Номер телефона</td>
+							<td><input type="tel" pattern="[0-9]{3}\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="xxx xxx-xx-xx" required></td>
+						</tr>
+						<tr>
+							<td>Веб-сайт</td>
+							<td><input type="url"></td>
+						</tr>
+						<tr>
+							<td>Дата рождения</td>
+							<td><input type="date"></td>
+						</tr>
+					</table>
+				</div>
+  			</fieldset>
+  			<fieldset>
+				<legend>Параметры доставки</legend>
+				<div>
+					<table>
+						<tr>
+							<td>Страна</td>
+							<td>
+								<select>
+									<option disabled selected>
+									<option>Belarus</option>
+									<option>Kazakhstan</option>
+									<option>Russia</option>
+									<option>Ukraine</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Адрес</td>
+							<td><textarea rows="5" cols="20" name="text"></textarea></td>
+						</tr>
+						<tr>
+							<td>Почтовый индекс</td>
+							<td><input type="text"></td>
+						</tr>
+					</table>
+				</div>
+  			</fieldset>
+  			<fieldset>
+				<legend>Предпочитаемый способ получения уведолений</legend>
+				<div>
+					<table>
+						<tr>
+							<td>
+								<label><input type="radio" name="notify">По Email</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label><input type="radio" name="notify">По телефону</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label><input type="radio" name="notify">Не уведомлять меня</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Количество уведомлений в неделю</label>
+								<input type="number" min="7" max="21" value="7">
+							</td>
+						</tr>
+					</table>
+				</div>
+  			</fieldset>
+  			<fieldset>
+  				<input type="submit" value="Отправить данные">
+  			</fieldset>
+  			
+		</form>
+	</body>
+</html>

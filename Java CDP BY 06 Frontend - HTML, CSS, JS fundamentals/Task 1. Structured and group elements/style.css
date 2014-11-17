@@ -1,0 +1,105 @@
+
+/* Header
+-----------------------------------------------------------------------------*/
+header {
+	height: 80px;
+	background: #412D4C;
+	text-align: center;
+	color: #EFF0C9;
+}
+
+h1 {
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0px;
+	font-family: Arial;
+	padding-top: 12px;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 0px;
+}
+
+h3 {
+	font-size: 18px;
+	text-align: center;
+	color: #EFF0C9;
+}
+
+body {
+	background: #3F5C3C;
+}
+
+nav {
+	display: block;
+	float: left;
+	width: 25%
+}
+
+nav a:link, nav a:visited {
+	border-bottom: 2px solid #EFF0C9;
+	padding: 10px;
+	display: block;
+	margin: 5px;
+	font-weight: bold;
+	color: #45434C;
+}
+
+section {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+article {
+	margin: 5px;
+	padding: 5px;
+	display: block;
+	background: #EFF0C9;
+	border-radius: 10px;
+}
+
+aside {
+	display: block;
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+
+article header {
+	padding: 5px;
+	border-radius: 10px;
+	height: 16px;
+}
+
+article h1 {
+	font-size: 15px;
+	padding-top: 0px;
+}
+
+article footer {
+	padding: 5px;
+	border-radius: 10px;
+	height: 16px;
+	font-size: 
+}
+
+footer h2 {
+	font-size: 15px;
+	padding-top: 0px;
+}
+
+footer {
+	display: block;
+	text-align: center;
+	background-color: #65434C;
+	color: #EFF0C9;
+	clear: both;
+}
+
+figcaption {
+	font-size: 16px;
+	color: #EFF0C9;
+	font-weight: bold;
+}
