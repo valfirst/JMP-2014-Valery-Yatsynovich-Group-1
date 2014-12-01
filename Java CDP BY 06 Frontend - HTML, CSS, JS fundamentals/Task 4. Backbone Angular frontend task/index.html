@@ -1,0 +1,70 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+	<meta charset="utf-8">
+	<title>Bookmarking App</title>
+	<script src="vendor/js/angular.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+</head>
+<body ng-controller="todoCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col=xs-12">
+				<h1>Bookmarking App</h1>
+			</div>	
+		</div>
+		<div>
+			<div class="col-xs-6">
+				<form role="form" id="form" name="bookmarkForm" ng-submit="addNewBookmark(bookmarkId, bookmarkURL, bookmarkTitle, bookmarkTags)">
+					<div class="alert alert-danger" style="display:none;">
+						<p></p>
+					</div>
+					<input type="hidden" ng-model="bookmarkId">
+					<div class="form-group">
+						<label >Bookmark URL</label>
+						<input type="url" class="form-control" name="urlMy" id="url" ng-model="bookmarkURL" placeholder="Enter bookmark URL" required>
+					</div>
+					<div class="form-group">
+						<label for="bookmarkTitle">Bookmark Title</label>
+						<input type="text" class="form-control" id="title" ng-model="bookmarkTitle" placeholder="Enter bookmark title" required>
+					</div>
+					<div class="form-group">
+						<label for="bookmarkTags">Tags: (separated by commas)</label>
+						<input type="text" class="form-control" id="tags" ng-model="bookmarkTags" ng-list="," ng-trim="true" placeholder="Enter bookmark tags">
+					</div>
+
+					<button id="btnSave" class="btn btn-success">Save</button>
+					<button id="btnClear" class="btn btn-default" ng-click="clearInput()">Clear</button>
+				</form>
+			</div>
+		</div>
+		<div class="row" >
+			<!-- Bookmark list -->
+			<div class="col-xs-10">
+				<div id="bookmarkListContainer">
+					<h2>Filtered by Tag: <span id="bookmarkTagFilter">{{(todo.tagFilter !== undefined)? todo.tagFilter : "None"}}</span> | <a id="clearFilter" href="#" ng-click="setTagFilter(undefined)">Clear Filter</a></h2>
+					<ul id="bookmarkList">
+						<li ng-repeat="item in todo.items | filter:filterByTag" data-ng-init="init()">
+							<button class="btn btn-warning btn-xs" ng-click="editBookmark(item)">Edit</button>
+							<button class="btn btn-danger btn-xs" ng-click="removeBookmark(item)">Delete</button>
+						{{item.title}}({{item.url}}) | 
+							<span ng-repeat="tag in item.tags">{{tag}}{{$last ? '' : ', '}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Tag list   -->
+			<div class="col-xs-2">
+				<h4>Bookmark's Tags</h4>
+				<ul id="tagCountList">
+					<li ng-repeat="(key, value) in todo.tagsMap" ng-click="setTagFilter(key)">
+						<a href="#">{{key}}({{value.length}})</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
