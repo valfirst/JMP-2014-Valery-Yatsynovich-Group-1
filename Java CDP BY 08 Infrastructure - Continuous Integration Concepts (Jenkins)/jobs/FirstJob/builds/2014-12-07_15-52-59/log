@@ -1,0 +1,9 @@
+Started by timer
+Building in workspace C:\Program Files\Jenkins\workspace\FirstJob
+[FirstJob] $ cmd /c call C:\WINDOWS\TEMP\hudson1939215947198084109.bat
+
+C:\Program Files\Jenkins\workspace\FirstJob>echo "FirstJob started" 
+"FirstJob started"
+
+C:\Program Files\Jenkins\workspace\FirstJob>exit 0 
+Finished: SUCCESS

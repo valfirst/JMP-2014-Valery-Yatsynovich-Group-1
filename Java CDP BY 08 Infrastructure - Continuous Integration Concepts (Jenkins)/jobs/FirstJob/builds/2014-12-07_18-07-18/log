@@ -1,0 +1,13 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace C:\Program Files\Jenkins\workspace\FirstJob
+No emails were triggered.
+[FirstJob] $ cmd /c call C:\WINDOWS\TEMP\hudson2369911734661011780.bat
+
+C:\Program Files\Jenkins\workspace\FirstJob>echo "FirstJob started" 
+"FirstJob started"
+
+C:\Program Files\Jenkins\workspace\FirstJob>exit 0 
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: dmitry.targonsky@gmail.com
+Finished: SUCCESS

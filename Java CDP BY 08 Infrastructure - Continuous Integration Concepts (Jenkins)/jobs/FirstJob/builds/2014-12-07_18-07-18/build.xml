@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserIdCause>
+          <userId>admin</userId>
+        </hudson.model.Cause_-UserIdCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.tasks.MailMessageIdAction plugin="mailer@1.12">
+      <messageId>&lt;27963818.42.1417979238328.JavaMail.SYSTEM@microsof-cacecd&gt;</messageId>
+    </hudson.tasks.MailMessageIdAction>
+  </actions>
+  <number>19</number>
+  <startTime>1417979238140</startTime>
+  <result>SUCCESS</result>
+  <duration>125</duration>
+  <charset>windows-1251</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>C:\Program Files\Jenkins\workspace\FirstJob</workspace>
+  <hudsonVersion>1.580.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>
