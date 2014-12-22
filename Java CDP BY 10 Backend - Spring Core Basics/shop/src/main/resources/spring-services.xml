@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation=
+		"http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="org.shop.api.impl.ItemServiceImpl" class="org.shop.api.impl.ItemServiceImpl">
+		<constructor-arg ref="org.shop.repository.map.ItemMapRepository" />
+	</bean>
+
+	<bean id="org.shop.api.impl.OrderServiceImpl" class="org.shop.api.impl.OrderServiceImpl">
+		<property name="orderRepository" ref="org.shop.repository.map.OrderMapRepository"/>
+		<property name="itemService" ref="org.shop.api.impl.ItemServiceImpl"/>
+	</bean>
+
+	<bean id="productService" 
+		class="org.shop.api.impl.ProductServiceImpl" 
+		autowire="constructor">
+	</bean>
+
+	<bean id="proposalService" class="org.shop.api.impl.ProposalServiceImpl">
+		<constructor-arg ref="org.shop.repository.map.ProposalMapRepository" />
+		<property name="sellerService" ref="sellerService" />
+		<property name="productService" ref="productService" />
+	</bean>
+
+	<bean id="sellerService" 
+		class="org.shop.api.impl.SellerServiceImpl"
+		autowire="byType">
+	</bean>
+
+	<bean id="org.shop.api.impl.UserServiceImpl" 
+		class="org.shop.api.impl.UserServiceImpl" 
+		p:repository-ref="org.shop.repository.factory.UserRepositoryFactory.UserMapRepository">
+	</bean>
+	
+</beans>
